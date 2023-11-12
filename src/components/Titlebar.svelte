@@ -22,7 +22,10 @@
     }
 </script>
 
-<div class="titlebar" data-tauri-drag-region>
+<div
+    class="titlebar"
+    data-tauri-drag-region
+>
     <img alt="Logo" src="/favicon.png" />
     <p>{title}</p>
     <div>
@@ -41,17 +44,20 @@
     background-color: $color;
     height: $tb-height;
 
+    position: absolute;
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     user-select: none;
 
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     padding: 0 8px;
 
     p {
-      position: fixed;
+      position: absolute;
       left: 50%;
       transform: translateX(-50%);
       font-weight: bold;
@@ -79,5 +85,6 @@
         transition: background-color 0.13s ease-in-out;
       }
     }
+
   }
 </style>
