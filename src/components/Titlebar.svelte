@@ -28,7 +28,7 @@
 >
     <img alt="Logo" src="/favicon.png" />
     <p>{title}</p>
-    <div>
+    <div class="tb-controls">
         <button on:click={onMinimize}>-</button>
         <button on:click={onMaximize}>[]</button>
         <button on:click={onClose}>x</button>
@@ -37,8 +37,11 @@
 
 <style lang="scss">
   $color: #83b1f7;
-  $tb-height: 32px;
-  $tb-item-height: $tb-height - 6px;
+
+  $tb-height: 2rem;
+  $tb-item-height: $tb-height - 0.5rem;
+
+  $tb-item-padding: 0.7rem;
 
   .titlebar {
     background-color: $color;
@@ -54,7 +57,6 @@
     user-select: none;
 
     border-radius: 10px;
-    padding: 0 8px;
 
     p {
       position: absolute;
@@ -67,6 +69,7 @@
     img {
       height: $tb-item-height;
       width: $tb-item-height;
+      padding-left: $tb-item-padding;
     }
 
     button {
@@ -83,6 +86,10 @@
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);
         transition: background-color 0.13s ease-in-out;
+      }
+
+      .tb-controls {
+        padding-right: $tb-item-padding;
       }
     }
 
