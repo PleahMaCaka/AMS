@@ -15,11 +15,13 @@
     position: absolute;
     width: $panel-width;
     height: $panel-height;
+
     background-color: rgba(253, 253, 253, 0.65);
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: $bp-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    margin: 2vh + 2vh 4vw;
+    margin: 2.5rem 4.4rem;
+    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -30,9 +32,11 @@
   }
 
   .bp-content {
-    width: $panel-width - 1.5vw;
-    height: $panel-height - 1.5vh;
-    //margin: 20px;
+    //width: $panel-width - 1.5vw;
+    //height: $panel-height - 1.5vh;
+    width: 100%;
+    height: 100%;
+    //padding: 20px;
     background-color: rgba(253, 253, 253, 0.9);
     border-radius: $bp-radius;
 
