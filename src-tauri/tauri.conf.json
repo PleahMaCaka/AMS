@@ -60,9 +60,9 @@
       {
         "title": "tauri-svelte-template",
         "fullscreen": false,
-        "height": 480,
+        "height": 920,
         "resizable": true,
-        "width": 900,
+        "width": 640,
         "transparent": true,
         "decorations": false,
         "center": true
