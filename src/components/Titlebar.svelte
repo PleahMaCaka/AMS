@@ -1,4 +1,6 @@
 <script lang="ts">
+    export let title = "ASM"
+
     import { appWindow } from "@tauri-apps/api/window"
 
     const onMinimize = () => {
@@ -22,7 +24,7 @@
 
 <div class="titlebar" data-tauri-drag-region>
     <img alt="Logo" src="/favicon.png" />
-    <p>Tauri Svelte Template!</p>
+    <p>{title}</p>
     <div>
         <button on:click={onMinimize}>-</button>
         <button on:click={onMaximize}>[]</button>
@@ -31,7 +33,7 @@
 </div>
 
 <style lang="scss">
-  $color: orange;
+  $color: #83b1f7;
   $tb-height: 32px;
   $tb-item-height: $tb-height - 6px;
 
@@ -45,7 +47,7 @@
 
     user-select: none;
 
-    border-radius: 0 10px 0 0;
+    border-radius: 10px 10px 0 0;
     padding: 0 8px;
 
     p {
@@ -53,7 +55,7 @@
       left: 50%;
       transform: translateX(-50%);
       font-weight: bold;
-      color: lightgrey;
+      color: #fdfdfd;
     }
 
     img {
