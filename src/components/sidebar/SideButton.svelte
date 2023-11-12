@@ -4,8 +4,8 @@
 
 <div class="side-btn-wrap">
     <img
-        class="side-btn-icon"
         alt="Minecraft"
+        class="side-btn-icon"
         src={icon}
     />
 </div>
