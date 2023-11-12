@@ -1,9 +1,5 @@
 <script>
-    import Hello from "../components/Hello.svelte"
-    import Toolbar from "../components/Titlebar.svelte"
+    import BasePanel from "../components/panels/BasePanel.svelte"
 </script>
 
-<Toolbar/>
-<div class="centered">
-    <Hello />
-</div>
+<BasePanel/>
