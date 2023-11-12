@@ -1,23 +1,25 @@
 <div class="base-panel">
     <div class="bp-content">
-
+        <slot />
     </div>
 </div>
 
 <style lang="scss">
-  @import "../../scss/anim/appear";
+  @import "../../scss/anim/appear.scss";
+  @import "../../scss/vars/panel.scss";
+  @import "../../scss/vars/sidebar.scss";
 
   $bp-radius: 25px;
 
   .base-panel {
     position: absolute;
-    width: 80vw;
-    height: 95vh;
+    width: $panel-width;
+    height: $panel-height;
     background-color: rgba(253, 253, 253, 0.65);
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: $bp-radius;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    margin: 2rem + 0.4rem 4rem;
+    margin: 2vh + 2vh 4vw;
 
     display: flex;
     flex-direction: column;
@@ -28,9 +30,9 @@
   }
 
   .bp-content {
-    width: 90%;
-    height: 94%;
-    padding: 1rem;
+    width: $panel-width - 1.5vw;
+    height: $panel-height - 1.5vh;
+    //margin: 20px;
     background-color: rgba(253, 253, 253, 0.9);
     border-radius: $bp-radius;
 
