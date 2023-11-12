@@ -11,7 +11,7 @@
             on:click={() => isPinned = !isPinned}
         />
         <SideButton
-            icon="/mc.png"
+            icon="/cube-hole.svg"
         />
         <hr />
     </div>
