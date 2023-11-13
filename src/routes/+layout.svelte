@@ -1,9 +1,10 @@
 <script>
     import "../scss/global.scss"
-    import Sidebar from "../components/sidebar/Sidebar.svelte"
     import Titlebar from "../components/Titlebar.svelte"
+    import BasePanel from "../components/panels/BasePanel.svelte"
 </script>
 
 <Titlebar />
-<Sidebar />
-<slot />
+<BasePanel>
+    <slot />
+</BasePanel>

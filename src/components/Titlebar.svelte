@@ -22,20 +22,21 @@
     }
 </script>
 
-<div
-    class="titlebar"
-    data-tauri-drag-region
->
-    <img alt="Logo" src="/favicon.png" />
-    <p>{title}</p>
-    <div class="tb-controls">
-        <button on:click={onMinimize}>-</button>
-        <button on:click={onMaximize}>[]</button>
-        <button on:click={onClose}>x</button>
+<div class="tb-wrap" data-tauri-drag-region>
+    <div class="titlebar" data-tauri-drag-region>
+        <img alt="Logo" src="/favicon.png" data-tauri-drag-region />
+        <p data-tauri-drag-region>{title}</p>
+        <div class="tb-controls">
+            <button on:click={onMinimize}>-</button>
+            <button on:click={onMaximize}>[]</button>
+            <button on:click={onClose}>x</button>
+        </div>
     </div>
 </div>
 
 <style lang="scss">
+  @import "../scss/vars/panel.scss";
+
   $color: #83b1f7;
 
   $tb-height: 2rem;
@@ -43,12 +44,18 @@
 
   $tb-item-padding: 0.7rem;
 
+  .tb-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .titlebar {
     background-color: $color;
     height: $tb-height;
 
-    position: absolute;
-    width: 100%;
+    position: fixed;
+    width: $panel-width;
 
     display: flex;
     align-items: center;

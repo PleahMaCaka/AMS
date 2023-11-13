@@ -1,5 +1,3 @@
-<script>
-    import BasePanel from "../components/panels/BasePanel.svelte"
-</script>
+<script></script>
 
-<BasePanel />
+<slot />

@@ -1,15 +1,28 @@
-<div class="base-panel">
-    <div class="bp-content">
-        <slot />
+<script>
+    import Sidebar from "../sidebar/Sidebar.svelte"
+</script>
+
+<div class="bp-holder">
+    <div class="base-panel">
+        <Sidebar />
+        <div class="bp-content"></div>
     </div>
 </div>
-
 <style lang="scss">
   @import "../../scss/anim/appear.scss";
   @import "../../scss/vars/panel.scss";
   @import "../../scss/vars/sidebar.scss";
 
   $bp-radius: 25px;
+  $bp-content-margin: 6px;
+
+  .bp-holder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 
   .base-panel {
     position: absolute;
@@ -17,11 +30,9 @@
     height: $panel-height;
 
     background-color: rgba(253, 253, 253, 0.65);
-    border: 1px solid rgba(0, 0, 0, .1);
     border-radius: $bp-radius;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    margin: 2.5rem 4.4rem;
-    padding: 20px;
 
     display: flex;
     flex-direction: column;
@@ -32,14 +43,13 @@
   }
 
   .bp-content {
-    //width: $panel-width - 1.5vw;
-    //height: $panel-height - 1.5vh;
-    width: 100%;
-    height: 100%;
-    //padding: 20px;
+    z-index: 1;
     background-color: rgba(253, 253, 253, 0.9);
     border-radius: $bp-radius;
 
-    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    width: calc(100% - $bp-content-margin * 2);
+    height: calc(100% - $bp-content-margin * 2);
+    margin: $bp-content-margin;
+    box-shadow: 0 0 $bp-content-margin rgba(0, 0, 0, .5);
   }
 </style>

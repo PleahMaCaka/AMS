@@ -19,6 +19,7 @@
 
     border-radius: 25%;
     border: 1px solid rgba(187, 187, 187, 0.5);
+    box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.5);
 
     width: $side-btn-size;
     height: $side-btn-size;
@@ -27,6 +28,7 @@
 
     &:hover {
       background-color: rgba(187, 187, 187, 0.75);
+      box-shadow: 0 0 0 1px rgba(187, 187, 187, 0.75);
     }
   }
 
