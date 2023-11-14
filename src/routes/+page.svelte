@@ -1,3 +1,10 @@
-<script></script>
+<script>
+    import AddInstanceButton from "../components/panels/AddInstanceButton.svelte";
+</script>
 
-<slot />
+<div>
+    <AddInstanceButton />
+</div>
+
+<style>
+</style>
