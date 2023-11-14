@@ -5,16 +5,21 @@
 <div class="bp-holder">
     <div class="base-panel">
         <Sidebar />
-        <div class="bp-content"></div>
+        <div class="bp-content">
+          <slot />
+        </div>
     </div>
 </div>
+
 <style lang="scss">
   @import "../../scss/anim/appear.scss";
   @import "../../scss/vars/panel.scss";
   @import "../../scss/vars/sidebar.scss";
 
   $bp-radius: 25px;
+
   $bp-content-margin: 6px;
+  $bp-content-padding: 8px;
 
   .bp-holder {
     width: 100%;
@@ -47,9 +52,12 @@
     background-color: rgba(253, 253, 253, 0.9);
     border-radius: $bp-radius;
 
-    width: calc(100% - $bp-content-margin * 2);
-    height: calc(100% - $bp-content-margin * 2);
+    // effective silly code lol :[
+    // I won't do it like this
+    width: calc((100% - $bp-content-margin * 2) - $bp-content-padding * 2);
+    height: calc((100% - $bp-content-margin * 2) - $bp-content-padding * 2);
     margin: $bp-content-margin;
+    padding: $bp-content-padding;
     box-shadow: 0 0 $bp-content-margin rgba(0, 0, 0, .5);
   }
 </style>
