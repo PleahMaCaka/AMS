@@ -7,8 +7,8 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "tauri-svelte-template",
-    "version": "0.1.0"
+    "productName": "ams",
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -32,7 +32,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "io.github.pleahmacaka",
+      "identifier": "io.github.pleahmacaka.ams",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -58,7 +58,7 @@
     },
     "windows": [
       {
-        "title": "tauri-svelte-template",
+        "title": "AMS",
         "fullscreen": false,
         "height": 620,
         "resizable": true,
