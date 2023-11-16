@@ -9,9 +9,11 @@
         class="sb-btn"
         on:click={() => isPinned = !isPinned}
     />
-    <SideButton
-        icon="/cube-hole.svg"
-    />
+    <a href="/">
+        <SideButton
+            icon="/cube-hole.svg"
+        />
+    </a>
     <hr />
 </div>
 

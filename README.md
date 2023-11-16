@@ -1,10 +1,14 @@
-# Tauri Svelte Template
+## Awesome Minecraft Server Manager
 
-Everything I (not you) need to start a Svelte + Tauri project w. Svelte, Tauri and SCSS
+This is a minecraft server manager created with Tauri and Svelte.
 
-## Developing
+### Development
 
 ```bash
 pnpm install
 pnpm tauri dev
 ```
+
+### External Assets
+
+- [PaperMC](https://docs.papermc.io/misc/assets) - [Logo](./static/logo/paper.png)

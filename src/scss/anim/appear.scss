@@ -1,8 +1,31 @@
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 3%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
+
+@mixin expand-width($target-width: 100%, $sec: 1.7s) {
+    @keyframes expand-width-anim {
+        0% {
+            width: 0;
+        }
+        to {
+            width: $target-width;
+        }
+    }
+    animation: expand-width-anim $sec forwards;
 }
