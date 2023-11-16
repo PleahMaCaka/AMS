@@ -1,14 +1,11 @@
-<script>
-    import Progress from "../../components/panels/progress/Progress.svelte"
-</script>
+<script></script>
 
 <div class="create-page">
-    <Progress />
     <h1>Create New Instance</h1>
     <p>Choose options for server</p>
 </div>
 
-<style>
+<style lang="scss">
     .create-page {
         display: flex;
         flex-direction: column;

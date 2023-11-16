@@ -19,5 +19,5 @@ ij_typescript_force_semicolon_style = false
 ij_javascript_force_semicolon_style = false
 
 
-[*.{json,yml,scss,css}]
+[*.{json,yml}]
 indent_size = 2
