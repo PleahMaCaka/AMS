@@ -18,5 +18,6 @@ ij_javascript_spaces_within_object_literal_braces = true
 ij_typescript_force_semicolon_style = false
 ij_javascript_force_semicolon_style = false
 
-[*.{json,yml,scss,config.js}]
+
+[*.{json,yml,scss,css}]
 indent_size = 2
