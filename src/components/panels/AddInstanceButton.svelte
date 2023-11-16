@@ -1,13 +1,16 @@
-<button class="add-serv-btn">
-    <img alt="Add" src="/plus.svg" />
-</button>
+<!-- on:click to redirect using by (window.location.href) is wierd, so use <a> tag instead -->
+<a href="/create">
+    <button class="add-serv-btn">
+        <img alt="Add" src="/plus.svg" />
+    </button>
+</a>
 
 <style lang="scss">
   .add-serv-btn {
     border-radius: 25px;
-    
+
     width: 45%;
-    min-width: 200px; 
+    min-width: 200px;
 
     height: 120px;
     margin: 0.5rem;
