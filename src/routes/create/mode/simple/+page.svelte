@@ -1,3 +1,3 @@
 <div>
-    <h3>Simple Panel!</h3>
+    Simple Panel!
 </div>

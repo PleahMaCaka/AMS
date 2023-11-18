@@ -6,7 +6,7 @@
     export let label: ServerLabel = "None"
 </script>
 
-<a href="/create/mode" class="no-deco">
+<a href="/create/mode/simple" class="no-deco">
     <div class="serv-type-btn center-flex-column">
         <div class="serv-type-content center-flex-column">
             <img alt="icon" src={icon} />

@@ -1,20 +1,24 @@
-<script>
-    import {stateStore} from "../../../stores/stateStore"
+<script lang="ts">
+    import { stateStore } from "../../../stores/stateStore"
 </script>
 
 <div class="create-mode fade-in-up">
-    <button
-        class="create-mode-button"
-        class:mod-selected={$stateStore.mode === "simple"}
-        on:click={() => $stateStore.mode = "simple"}
-    >Simple
-    </button>
-    <button
-        class="create-mode-button"
-        class:mod-selected={$stateStore.mode === "advanced"}
-        on:click={() => $stateStore.mode = "advanced"}
-    >Advanced
-    </button>
+    <a href="/create/mode/simple">
+        <button
+            class="create-mode-button"
+            class:mod-selected={$stateStore.mode === "simple"}
+            on:click={() => $stateStore.mode = "simple"}
+        >Simple
+        </button>
+    </a>
+    <a href="/create/mode/advanced">
+        <button
+            class="create-mode-button"
+            class:mod-selected={$stateStore.mode === "advanced"}
+            on:click={() => $stateStore.mode = "advanced"}
+        >Advanced
+        </button>
+    </a>
 </div>
 <slot />
 
