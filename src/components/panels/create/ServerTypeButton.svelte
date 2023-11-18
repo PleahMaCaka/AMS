@@ -7,17 +7,19 @@
     export let label: ServerLabel = "None"
 </script>
 
-<div class="serv-type-btn center-flex-column">
-    <div class="serv-type-content center-flex-column">
-        <img alt="icon" src={icon} />
-        <h3>{title}</h3>
+<a href="/create/mode" class="no-deco">
+    <div class="serv-type-btn center-flex-column">
+        <div class="serv-type-content center-flex-column">
+            <img alt="icon" src={icon} />
+            <h3>{title}</h3>
+        </div>
+        <p
+            class:hidden={label === "None"}
+            class:label-recommended={label === "Recommended"}
+            class:label-warning={label === "Warning"}
+        >{label}</p>
     </div>
-    <p
-        class:label-none={label === "None"}
-        class:label-recommended={label === "Recommended"}
-        class:label-warning={label === "Warning"}
-    >{label}</p>
-</div>
+</a>
 
 <style lang="scss">
     @import "../../../scss/centered.scss";
