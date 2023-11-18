@@ -1,8 +1,7 @@
-
-.no-deco {
+:global(.no-deco) {
     text-decoration: none;
 }
 
-.hidden {
+:global(.hidden) {
     visibility: hidden;
 }
