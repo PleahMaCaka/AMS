@@ -1,5 +1,4 @@
 <script lang="ts">
-
     import type { ServerLabel } from "../../../types/ServerLabel"
 
     export let icon = ""
@@ -13,21 +12,21 @@
             <img alt="icon" src={icon} />
             <h3>{title}</h3>
         </div>
-        <p
-            class:hidden={label === "None"}
-            class:label-recommended={label === "Recommended"}
-            class:label-warning={label === "Warning"}
+        <p class:hidden={label === "None"}
+           class:label-recommended={label === "Recommended"}
+           class:label-warning={label === "Warning"}
         >{label}</p>
     </div>
 </a>
 
 <style lang="scss">
     @import "../../../scss/centered.scss";
+    @import "../../../scss/utils.scss";
 
     $serv-type-size: 130px;
 
     .serv-type-btn {
-        width: 130px;
+        width: 115px;
         height: 170px;
         margin: .5rem;
 
@@ -76,10 +75,6 @@
             border-radius: 5px;
             padding: .1rem .4rem;
         }
-    }
-
-    .label-none {
-        visibility: hidden;
     }
 
     .label-recommended {
