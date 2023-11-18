@@ -1,4 +1,6 @@
-<div class="create-page">
+<div class="create-page fade-in-up">
+    <h1>Create New Server</h1>
+    <hr />
     <slot />
 </div>
 
@@ -16,7 +18,15 @@
         flex-direction: column;
         align-items: center;
         height: 100%;
-        animation: fade-in-up .13s ease-in-out;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    hr {
+        opacity: 0.7;
+        @include expand-width(40%);
     }
 </style>
 

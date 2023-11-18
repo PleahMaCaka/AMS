@@ -18,6 +18,10 @@
     }
 }
 
+:global(.fade-in-up) {
+    animation: fade-in-up .13s forwards;
+}
+
 @mixin expand-width($target-width: 100%, $sec: 1.7s) {
     @keyframes expand-width-anim {
         0% {

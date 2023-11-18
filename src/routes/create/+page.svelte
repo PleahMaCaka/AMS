@@ -2,9 +2,7 @@
     import BigTitleButton from "../../components/panels/create/ServerTypeButton.svelte"
 </script>
 
-<h1>Create New Server</h1>
 <p>Choose type of server</p>
-<hr />
 <h2>Vanilla or Plugin</h2>
 <div class="serv-type-selection">
     <BigTitleButton
@@ -21,15 +19,6 @@
 
 <style lang="scss">
     @import "../../scss/anim/appear.scss";
-
-    h1 {
-        margin-bottom: 0;
-    }
-
-    hr {
-        opacity: 0.7;
-        @include expand-width(40%);
-    }
 
     .serv-type-selection {
         display: flex;
