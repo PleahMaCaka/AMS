@@ -22,7 +22,11 @@
     animation: fade-in-up .13s forwards;
 }
 
-@mixin expand-width($target-width: 100%, $sec: 1.7s) {
+/**
+ * usage: @include expand-width(40%, 1s);
+ *        @include expand-width(100%, 2s);
+ */
+@mixin expand-width($target-width: 100%, $sec: 1s) {
     @keyframes expand-width-anim {
         0% {
             width: 0;
