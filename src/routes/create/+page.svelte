@@ -35,6 +35,8 @@
         flex-direction: column;
         align-items: center;
         height: 100%;
+
+        animation: fade-in-up .5s ease-in-out;
     }
 
     h1 {
