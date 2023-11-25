@@ -15,6 +15,15 @@
       "all": false,
       "window": {
         "all": true
+      },
+      "path": {
+        "all": true
+      },
+      "os": {
+        "all": true
+      },
+      "fs": {
+        "all": true
       }
     },
     "bundle": {

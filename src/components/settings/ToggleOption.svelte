@@ -1,6 +1,6 @@
 <script lang="ts">
-
     import type { Writable } from "svelte/store"
+    import { amsConfig } from "../../api/AmsConfig"
 
     export let title: string = "Toggle Option!"
     export let description: string = "Do you know about that? A toggle option is a checkbox that can be toggled on or off."
@@ -8,11 +8,12 @@
     export let store: Writable<boolean> | undefined = undefined
     export let disable: boolean = false
 
-    function toggleCheckbox() {
+    async function toggleCheckbox() {
         if (store === undefined)
             return console.log(`The Store is not connected in the "${title}" toggle option.`)
 
         store.update((value) => !value)
+        await amsConfig.save()
     }
 </script>
 
