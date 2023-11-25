@@ -17,6 +17,9 @@ devDependencies:
   '@tauri-apps/cli':
     specifier: ^1.5.6
     version: 1.5.6
+  '@types/node':
+    specifier: ^20.10.0
+    version: 20.10.0
   sass:
     specifier: ^1.69.5
     version: 1.69.5
@@ -34,7 +37,7 @@ devDependencies:
     version: 5.2.2
   vite:
     specifier: ^4.5.0
-    version: 4.5.0(sass@1.69.5)
+    version: 4.5.0(@types/node@20.10.0)(sass@1.69.5)
 
 packages:
 
@@ -335,7 +338,7 @@ packages:
       svelte: 4.2.2
       tiny-glob: 0.2.9
       undici: 5.26.5
-      vite: 4.5.0(sass@1.69.5)
+      vite: 4.5.0(@types/node@20.10.0)(sass@1.69.5)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -351,7 +354,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 2.4.5(svelte@4.2.2)(vite@4.5.0)
       debug: 4.3.4
       svelte: 4.2.2
-      vite: 4.5.0(sass@1.69.5)
+      vite: 4.5.0(@types/node@20.10.0)(sass@1.69.5)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -370,7 +373,7 @@ packages:
       magic-string: 0.30.3
       svelte: 4.2.2
       svelte-hmr: 0.15.3(svelte@4.2.2)
-      vite: 4.5.0(sass@1.69.5)
+      vite: 4.5.0(@types/node@20.10.0)(sass@1.69.5)
       vitefu: 0.2.4(vite@4.5.0)
     transitivePeerDependencies:
       - supports-color
@@ -494,6 +497,12 @@ packages:
 
   /@types/estree@1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
+    dev: true
+
+  /@types/node@20.10.0:
+    resolution: {integrity: sha512-D0WfRmU9TQ8I9PFx9Yc+EBHw+vSpIub4IDvQivcp26PtPrdMGAq5SDcpXEo/epqa/DXotVpekHiLNTg3iaKXBQ==}
+    dependencies:
+      undici-types: 5.26.5
     dev: true
 
   /@types/pug@2.0.6:
@@ -1167,6 +1176,10 @@ packages:
     hasBin: true
     dev: true
 
+  /undici-types@5.26.5:
+    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
+    dev: true
+
   /undici@5.26.5:
     resolution: {integrity: sha512-cSb4bPFd5qgR7qr2jYAi0hlX9n5YKK2ONKkLFkxl+v/9BvC0sOpZjBHDBSXc5lWAf5ty9oZdRXytBIHzgUcerw==}
     engines: {node: '>=14.0'}
@@ -1174,7 +1187,7 @@ packages:
       '@fastify/busboy': 2.0.0
     dev: true
 
-  /vite@4.5.0(sass@1.69.5):
+  /vite@4.5.0(@types/node@20.10.0)(sass@1.69.5):
     resolution: {integrity: sha512-ulr8rNLA6rkyFAlVWw2q5YJ91v098AFQ2R0PRFwPzREXOUJQPtFUG0t+/ZikhaOCDqFoDhN6/v8Sq0o4araFAw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -1202,6 +1215,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.10.0
       esbuild: 0.18.20
       postcss: 8.4.28
       rollup: 3.28.1
@@ -1218,7 +1232,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.5.0(sass@1.69.5)
+      vite: 4.5.0(@types/node@20.10.0)(sass@1.69.5)
     dev: true
 
   /wrappy@1.0.2:
