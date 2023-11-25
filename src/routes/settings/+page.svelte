@@ -12,6 +12,11 @@
             description="Use the default JAVA_HOME environment variable instead of the one specified in the settings."
             store={configStore.useDefaultJavaHome}
         />
+        <ToggleOption
+            title="Debug Mode"
+            description="Enable debug mode to see more information in the console."
+            store={configStore.debugMode}
+        />
     </div>
 </div>
 
