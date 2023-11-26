@@ -1,6 +1,4 @@
 <script lang="ts">
-    export let title = "ASM"
-
     import { appWindow } from "@tauri-apps/api/window"
 
     const onMinimize = () => {
@@ -25,7 +23,7 @@
 <div class="tb-wrap" data-tauri-drag-region>
     <div class="titlebar" data-tauri-drag-region>
         <img alt="Logo" data-tauri-drag-region src="/favicon.png" />
-        <p data-tauri-drag-region>{title}</p>
+        <p data-tauri-drag-region>{document.title}</p>
         <div class="tb-controls">
             <button on:click={onMinimize}>-</button>
             <button on:click={onMaximize}>[]</button>
