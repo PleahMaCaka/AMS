@@ -1,11 +1,11 @@
 [package]
-name = "AMS"
+name = "ams"
 version = "0.0.2"
 description = "Awesome Minecraft Server Manager!"
-authors = ["you"]
+authors = ["PleahMaCaka"]
 license = "MIT"
 repository = "https://github.com/pleahmacaka/AMS"
-default-run = "AMS"
+default-run = "ams"
 edition = "2021"
 rust-version = "1.60"
 
