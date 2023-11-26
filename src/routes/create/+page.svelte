@@ -1,12 +1,13 @@
 <script lang="ts">
     import BigTitleButton from "../../components/panels/create/ServerTypeButton.svelte"
+    import PageTitle from "../../components/share/PageTitle.svelte"
 </script>
 
 <div class="create-page">
-    <h1>Create a new server</h1>
-    <p>Select the type of server you want to create.</p>
-    <hr />
-
+    <PageTitle
+        title="Create a new server"
+        subtitle="Select the type of server you want to create."
+    />
     <div class="serv-type-selection">
         <BigTitleButton
             icon="/logo/mc.png"
@@ -31,21 +32,14 @@
         right: 0;
         bottom: 0;
 
+        margin-top: 1rem;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         height: 100%;
 
         animation: fade-in-up .5s ease-in-out;
-    }
-
-    h1 {
-        margin-bottom: 0;
-    }
-
-    hr {
-        opacity: 0.7;
-        @include expand-width(40%);
     }
 
     .serv-type-selection {

@@ -1,26 +1,33 @@
 <script lang="ts">
+    import PageTitle from "../../../components/share/PageTitle.svelte"
     import { stateStore } from "../../../stores/stateStore"
 </script>
 
-<div class="create-mode fade-in-up">
-    <a href="/create/mode/simple">
-        <button
-            class="create-mode-button"
-            class:mod-selected={$stateStore.mode === "simple"}
-            on:click={() => $stateStore.mode = "simple"}
-        >Simple
-        </button>
-    </a>
-    <a href="/create/mode/advanced">
-        <button
-            class="create-mode-button"
-            class:mod-selected={$stateStore.mode === "advanced"}
-            on:click={() => $stateStore.mode = "advanced"}
-        >Advanced
-        </button>
-    </a>
+<div class="create-instance">
+    <PageTitle
+        title="Create Instance"
+        subtitle="Create a new instance of the cube game!"
+    />
+    <div class="create-mode fade-in-up">
+        <a href="/create/mode/simple">
+            <button
+                class="create-mode-button"
+                class:mod-selected={$stateStore.mode === "simple"}
+                on:click={() => $stateStore.mode = "simple"}
+            >Simple
+            </button>
+        </a>
+        <a href="/create/mode/advanced">
+            <button
+                class="create-mode-button"
+                class:mod-selected={$stateStore.mode === "advanced"}
+                on:click={() => $stateStore.mode = "advanced"}
+            >Advanced
+            </button>
+        </a>
+    </div>
+    <slot />
 </div>
-<slot />
 
 <style lang="scss">
     @import "../../../scss/anim/appear.scss";
