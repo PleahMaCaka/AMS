@@ -1,6 +1,6 @@
 <script>
     import "../scss/global.scss"
-    import Titlebar from "../components/Titlebar.svelte"
+    import Titlebar from "../components/Toolbar.svelte"
     import BasePanel from "../components/panels/BasePanel.svelte"
     import { onMount } from "svelte"
     import { amsConfig } from "../api/AmsConfig"
