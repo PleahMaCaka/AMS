@@ -5,15 +5,15 @@
         appWindow.minimize()
     }
 
-    const onMaximize = () => {
-        appWindow.isMaximized().then((isMaximized) => {
-            if (isMaximized) {
-                appWindow.unmaximize()
-            } else {
-                appWindow.maximize()
-            }
-        })
-    }
+    // const onMaximize = () => {
+    //     appWindow.isMaximized().then((isMaximized) => {
+    //         if (isMaximized) {
+    //             appWindow.unmaximize()
+    //         } else {
+    //             appWindow.maximize()
+    //         }
+    //     })
+    // }
 
     const onClose = () => {
         appWindow.close()
@@ -26,7 +26,6 @@
         <p data-tauri-drag-region>{document.title}</p>
         <div class="tb-controls">
             <button on:click={onMinimize}>-</button>
-            <button on:click={onMaximize}>[]</button>
             <button on:click={onClose}>x</button>
         </div>
     </div>
@@ -38,7 +37,7 @@
     $color: #83b1f7;
 
     $tb-height: 2rem;
-    $tb-item-height: $tb-height - 0.5rem;
+    $tb-item-height: $tb-height - 0.3rem;
 
     $tb-item-padding: 0.7rem;
 
@@ -92,10 +91,10 @@
                 background-color: rgba(0, 0, 0, 0.1);
                 transition: background-color 0.13s ease-in-out;
             }
+        }
 
-            .tb-controls {
-                padding-right: $tb-item-padding;
-            }
+        .tb-controls {
+            padding-right: $tb-item-padding;
         }
 
     }
