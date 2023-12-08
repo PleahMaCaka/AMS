@@ -69,6 +69,8 @@
       {
         "title": "AMS",
         "fullscreen": false,
+        "minHeight": 550,
+        "minWidth": 400,
         "height": 620,
         "resizable": true,
         "width": 420,
