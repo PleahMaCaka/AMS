@@ -19,8 +19,8 @@ export const amsConfig = new class _ {
 
     public async save() {
         await invoke("save_config", {
-            path: await amsConfig.getConfigPath(),
-            config: amsConfig.convertToJson()
+            path: await this.getConfigPath(),
+            config: this.convertToJson()
         })
         if (get(configStore.debugMode))
             console.debug("Config saved!")
@@ -29,7 +29,7 @@ export const amsConfig = new class _ {
     public async load() {
         const config = JSON.parse(
             await invoke("load_config", {
-                path: await amsConfig.getConfigPath()
+                path: await this.getConfigPath()
             })
         )
 
