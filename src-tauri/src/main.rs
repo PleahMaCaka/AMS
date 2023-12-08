@@ -9,7 +9,7 @@ async fn save_config(path: String, config: String) -> Result<(), String> {
     // If a directory does not exist, create it
     if !dir_path.exists() {
         match std::fs::create_dir_all(dir_path) {
-            Ok(_) => println!("Directory created successfully"),
+            Ok(_) => println!("Created save directory {}", dir_path.display()),
             Err(e) => return Err(e.to_string()),
         }
     }
