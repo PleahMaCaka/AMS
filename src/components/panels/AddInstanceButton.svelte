@@ -4,20 +4,16 @@
 
 <!-- on:click to redirect using by (window.location.href) is wierd, so use <a> tag instead -->
 <BaseInstanceItem>
-    <a href="/create">
-        <button class="add-inst-btn">
+    <a href="/create" class="full">
+        <button class="add-inst-btn full">
             <img alt="Add" src="/plus.svg" />
         </button>
     </a>
 </BaseInstanceItem>
 
 <style lang="scss">
-
     .add-inst-btn {
         border-radius: 25px;
-
-        width: 100%;
-        height: 100%;
 
         border: dashed #83b1f7 3px;
         background-color: transparent;

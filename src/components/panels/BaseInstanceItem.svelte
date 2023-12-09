@@ -3,20 +3,21 @@
 </div>
 
 <style lang="scss">
-    $inst-height: 120px;
-    $inst-min-width: 200px;
-    $inst-width: 45%;
-    $inst-margin: 0.5rem;
-
     .inst-base {
+        display: flex;
         justify-content: center;
         align-items: center;
-        height: $inst-height;
-        min-width: $inst-min-width;
-        width: $inst-width;
-        margin: $inst-margin;
-
+        height: 120px;
+        width: 100%;
+        margin: 0.5rem;
         transition: all 0.2s ease-in-out;
         cursor: pointer;
+    }
+
+    @media (min-width: 520px) {
+        .inst-base {
+            width: calc(50% - 1rem);
+            min-width: 200px;
+        }
     }
 </style>
