@@ -13,7 +13,7 @@ export const amsConfig = new class _ {
         return JSON.stringify(config)
     }
 
-    private async getConfigPath(): Promise<string> {
+    public async getConfigPath(): Promise<string> {
         return `${await appConfigDir()}config.json`
     }
 
