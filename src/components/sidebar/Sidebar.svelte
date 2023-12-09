@@ -4,20 +4,17 @@
     export let isPinned = true
 </script>
 
-<div class="sidebar" class:sb-is-pinned={isPinned}>
+<div class="sb-box" class:sb-is-pinned={isPinned}>
     <button
-        class="sidebar-pin"
+        class="sb-pin"
         on:click={() => isPinned = !isPinned}
     />
-    <div class="sidebar-content">
-        <a href="/">
-            <SideButton icon="/cube-hole.svg" />
-        </a>
-        <div class="sidebar-end">
+    <div class="sb-mid">
+        <SideButton icon="/cube-hole.svg" href="/" />
+        <SideButton icon="/plus.svg" href="/create" />
+        <div class="sb-end">
             <hr />
-            <a href="/settings">
-                <SideButton icon="/settings.svg" />
-            </a>
+            <SideButton icon="/settings.svg" href="/settings" />
         </div>
     </div>
 </div>
@@ -26,7 +23,7 @@
     @import "../../scss/vars/sidebar.scss";
     @import "../../scss/vars/panel.scss";
 
-    .sidebar {
+    .sb-box {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -36,7 +33,7 @@
         width: $sidebar-width;
 
         min-height: 155px;
-        height: 0; // required for settings button to be at the bottom (flex-end)
+        height: auto; // required for settings button to be at the bottom (flex-end)
         max-height: 80%;
 
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -55,19 +52,21 @@
         }
     }
 
-    .sidebar-content {
+    .sb-mid {
         display: flex;
         flex-direction: column;
         height: 100%;
+        gap: 0.5rem;
     }
 
-    .sidebar-end {
+    .sb-end {
         display: flex;
         flex-direction: column;
         height: 100%;
         justify-content: flex-end;
 
         hr {
+            margin-top: 0;
             width: 100%;
         }
     }
@@ -78,11 +77,11 @@
         z-index: 2;
     }
 
-    .sb-is-pinned .sidebar-pin {
+    .sb-is-pinned .sb-pin {
         background-color: rgb(255, 40, 40);
     }
 
-    .sidebar-pin {
+    .sb-pin {
         position: absolute;
         top: 0;
         left: 0;

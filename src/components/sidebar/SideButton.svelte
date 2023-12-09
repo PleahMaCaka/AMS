@@ -1,14 +1,25 @@
 <script lang="ts">
     export let icon: string = ""
+    export let href: string = ""
 </script>
 
-<div class="side-btn-wrap">
-    <img
-        alt="Minecraft"
-        class="side-btn-icon"
-        src={icon}
-    />
-</div>
+{#if href}
+    <a href={href} class="side-btn-wrap">
+        <img
+            alt="Minecraft"
+            class="side-btn-icon"
+            src={icon}
+        />
+    </a>
+{:else}
+    <div class="side-btn-wrap">
+        <img
+            alt="Minecraft"
+            class="side-btn-icon"
+            src={icon}
+        />
+    </div>
+{/if}
 
 <style lang="scss">
     $side-btn-size: 3rem;
