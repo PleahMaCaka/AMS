@@ -4,7 +4,7 @@ import { get } from "svelte/store"
 import { configStore } from "../stores/configStore"
 
 
-export const amsConfig = new class _ {
+export const amsConfig = new class _ { // can't using `void new class` because of typecheck (IICE)
     private convertToJson(): string {
         const config = {
             useDefaultJavaHome: get(configStore.useDefaultJavaHome),
