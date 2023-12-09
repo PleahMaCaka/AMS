@@ -1,5 +1,8 @@
 <script lang="ts">
+    import { invoke } from "@tauri-apps/api"
+    import { amsConfig } from "../../api/AmsConfig"
     import ToggleOption from "../../components/settings/ToggleOption.svelte"
+    import JustButton from "../../components/share/JustButton.svelte"
     import { configStore } from "../../stores/configStore"
 </script>
 
@@ -17,6 +20,13 @@
             description="Enable debug mode to see more information in the console."
             store={configStore.debugMode}
         />
+        <div class="flex-row">
+            <JustButton
+                external={true}
+                name="Open Config Folder"
+                execute={async () => {await invoke("open_explorer", { path: await amsConfig.getConfigPath() })}}
+            />
+        </div>
     </div>
 </div>
 

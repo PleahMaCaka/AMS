@@ -1,6 +1,8 @@
 // DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+use std::process::Command;
+
 #[tauri::command]
 async fn save_config(path: String, config: String) -> Result<(), String> {
     // extract the directory path from the file path
@@ -41,11 +43,42 @@ async fn load_config(path: String) -> Result<String, String> {
     }
 }
 
+#[tauri::command]
+async fn open_explorer(path: String) {
+    #[cfg(target_os = "windows")]
+    {
+        // if os is windows, use explorer
+        Command::new("explorer")
+            .arg(["/select,", &path].concat())
+            .spawn()
+            .expect("Failed to open explorer");
+    }
+
+    #[cfg(target_os = "macos")]
+    {
+        // if os is mac, use open
+        Command::new("open")
+            .arg(["-R", &path].concat())
+            .spawn()
+            .expect("Failed to open explorer");
+    }
+
+    #[cfg(target_os = "linux")]
+    {
+        // if os is linux, use xdg-open
+        Command::new("xdg-open")
+            .arg(["--select", &path].concat())
+            .spawn()
+            .expect("Failed to open explorer");
+    }
+}
+
 fn main() {
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![
             save_config,
-            load_config
+            load_config,
+            open_explorer
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
