@@ -12,7 +12,11 @@
     .inst-item {
         width: 100%;
         height: 100%;
-        border: 1px solid black;
+        border: 1px solid #c4c4c4;
+
+        // hey copilot, i want light gray but not too light and little bit transparent
+        background-color: rgba(196, 196, 196, 0.62); // thanks copilot
+        border-radius: 8px;
 
         * {
             margin: 0;
